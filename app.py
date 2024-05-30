@@ -3,7 +3,7 @@ from authlib.integrations.flask_client import OAuth
 import os
 
 app = Flask(__name__)
-app.secret_key = '!secret'
+app.secret_key = os.urandom(24)
 app.config.from_object('config')
 
 # OAuth configuration
